@@ -20,7 +20,7 @@ public class GuestbookController {
 
     private final GuestbookService service;
 
-    @GetMapping({"/"})
+    @GetMapping({"","/"})
     public String index(){
        return "redirect:/guestbook/list";
     }
@@ -45,6 +45,6 @@ public class GuestbookController {
 
         redirectAttributes.addFlashAttribute("msg", gno);
 
-        return "redirect://guestbook/list";
+        return "redirect:/guestbook/list";
     }
 }
